@@ -10,12 +10,12 @@ namespace FoodEquals
     {
         static void Main(string[] args)
         {
-            string banana = "banana";
-            string banana2 = string.Copy(banana);         
+            Food banana = new Food("banana");
+            Food banana2 = new Food("banana");
+            Food chocolate = new Food("chocolate");
 
-            Console.WriteLine(banana);
-            Console.WriteLine(banana2);
-            Console.WriteLine(banana.Equals((object)banana2));
+            Console.WriteLine(banana.Equals(chocolate));
+            Console.WriteLine(banana.Equals(banana2));
         }
     }
 }
