@@ -10,17 +10,15 @@ namespace FoodEquals
     {
         static void Main(string[] args)
         {
-            Food banana = new Food("banana");
-            Food banana2 = new Food("banana");
-            Food chocolate = new Food("chocolate");
+            string banana = "banana";
+            string banana2 = string.Copy(banana);
+            
+            //ReferenceEquals() is a Static Method, so it cannot be overwritten.
 
-            //equality with the Static Equals() Method.
-            //same results as the Virtual Method, except with nulls.
-
-            //Console.WriteLine(banana.Equals(null));
-            Console.WriteLine(object.Equals(banana2, null));
-            Console.WriteLine(object.Equals(null, banana2));
-            Console.WriteLine(object.Equals(null, null)); //returns true
+            Console.WriteLine(banana);
+            Console.WriteLine(banana2);
+            Console.WriteLine(ReferenceEquals(banana, banana2));//returns false
+            Console.WriteLine(banana.Equals((object)banana2));//returns true
         }
     }
 }
