@@ -14,8 +14,13 @@ namespace FoodEquals
             Food banana2 = new Food("banana");
             Food chocolate = new Food("chocolate");
 
-            Console.WriteLine(banana.Equals(chocolate));
-            Console.WriteLine(banana.Equals(banana2));
+            //equality with the Static Equals() Method.
+            //same results as the Virtual Method, except with nulls.
+
+            //Console.WriteLine(banana.Equals(null));
+            Console.WriteLine(object.Equals(banana2, null));
+            Console.WriteLine(object.Equals(null, banana2));
+            Console.WriteLine(object.Equals(null, null)); //returns true
         }
     }
 }
